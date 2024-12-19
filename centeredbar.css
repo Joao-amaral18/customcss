@@ -1,0 +1,155 @@
+.monaco-editor .scroll-decoration {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75) !important;
+  top: -6px !important;
+}
+
+.part.sidebar {
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.25);
+}
+
+.monaco-tree .monaco-tree-row .label-name,
+.monaco-list .monaco-list-row .monaco-icon-label .label-name {
+  font-family: "JetBrainsMono Nerd Font" !important;
+  font-size: 12px !important;
+}
+
+.monaco-scrollable-element > .shadow.top {
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.75) !important;
+  top: -3px !important;
+}
+
+.composite.title {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-items: center !important;
+}
+
+.composite.title h2 {
+  font-weight: bold !important;
+  font-size: 12px !important;
+  text-transform: uppercase;
+}
+
+/* scrollbars */
+.scrollbar.vertical .slider {
+  position: absolute !important;
+  right: 5px !important;
+  width: 4px !important;
+  background: #343a51 !important;
+  left: auto !important;
+  border-radius: 3px;
+  /* &:hover{
+        background: #98a1ff !important;
+        box-shadow: 0 0 15px #6c84eed0;
+    } */
+}
+
+.scrollbar.horizontal .slider {
+  position: absolute !important;
+  bottom: 5px !important;
+  height: 4px !important;
+  background: #343a51 !important;
+  top: auto !important;
+  border-radius: 3px;
+  /* &:hover{
+        background: #98a1ff !important;
+        box-shadow: 0 0 15px #6c84eed0;
+    } */
+}
+
+/* hide scrollbar marks  */
+.decorationsOverviewRuler {
+  display: none !important;
+}
+
+.codicon-toolbar-more,
+.codicon-word-wrap {
+  display: block !important;
+}
+.watermark-box {
+  display: none !important;
+}
+
+.search-label {
+  font-family: "JetbrainsMono Nerd Font" !important;
+}
+
+.statusbar {
+  font-family: "JetbrainsMono Nerd Font" !important;
+}
+
+.label-name {
+  font-family: "JetbrainsMono Nerd Font" !important;
+}
+.quick-input-widget {
+  /*
+  width: 100%;
+  left: 50%;
+  top: 25% !important;
+  margin-left: -300px;
+  border-radius: 6px; */
+  position: absolute;
+  z-index: 2550;
+  transform: translateY(-50%) !important;
+  top: 50% !important;
+  border: solid 2px #ffffff2d !important;
+  -webkit-app-region: no-drag;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); /* 2% dim effect */
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+.quick-open-widget .quick-open-input {
+  width: 100%; /* Makes the input take full width of its container */
+  max-width: 1800px; /* Increased maximum width */
+  border: none;
+  margin: 6px;
+}
+
+.quick-open-widget .quick-open-input .monaco-inputbox {
+  width: 100%;
+  height: 115px;
+}
+.quick-open-widget .monaco-list .monaco-list-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Creates space between items */
+}
+
+.quick-open-widget .monaco-list-row {
+  padding: 8px 12px; /* Adds internal padding to each row */
+  margin: 4px 0; /* Optional: adds some margin between rows */
+  box-sizing: border-box; /* Ensures padding doesn't increase overall width */
+}
+body,
+.monaco-workbench,
+.monaco-editor,
+.quick-open-widget,
+.quick-open-widget .quick-open-input,
+.monaco-list-row {
+  font-family: "JetBrainsMono Nerd Font Mono", "Fira Code", "Consolas",
+    "Courier New", monospace;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://cdn.jsdelivr.net/npm/@jetbrains/mono@1.0.6/web/woff2/JetBrainsMono-Regular.woff2")
+    format("woff2");
+}
+* {
+  font-feature-settings: "liga" 1, "calt" 1; /* Optional: enables ligatures and contextual alternates */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
